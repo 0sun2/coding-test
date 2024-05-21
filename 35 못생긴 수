@@ -1,0 +1,22 @@
+n = int(input())
+
+ugly_num = [1]
+
+i2 = i3 = i5 = 0
+
+while len(ugly_num) < n: 
+    next_ugly = min(ugly_num[i2] * 2, ugly_num[i3] * 3, ugly_num[i5] * 5)
+    
+    if next_ugly == ugly_num[i2] * 2:
+        i2 += 1
+    if next_ugly == ugly_num[i3] * 3:
+        i3 += 1
+    if next_ugly == ugly_num[i5] * 5:
+        i5 += 1
+
+    ugly_num.append(next_ugly)
+
+print(ugly_num[-1])
+
+
+
